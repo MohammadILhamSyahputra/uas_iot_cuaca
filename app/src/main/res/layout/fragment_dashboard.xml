@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#F5F7FA">
+    android:background="#F8FAFC"
+    android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,16 +15,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Smart-Roof &amp; Air Quality"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="#1E293B"
-            android:layout_marginBottom="16dp"/>
+            android:textColor="#0F172A"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monitoring Cuaca Real-Time &amp; Kendali Atap Otomatis"
+            android:textSize="14sp"
+            android:textColor="#64748B"
+            android:layout_marginBottom="20dp"/>
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="#FFFFFF">
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            android:backgroundTint="#FFFFFF"
+            app:strokeWidth="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -33,65 +44,135 @@
                 android:padding="16dp">
 
                 <TextView
-                    android:id="@+id/tv_suhu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Suhu: -- °C"
-                    android:textSize="18sp"
-                    android:textColor="#334155"
-                    android:layout_marginBottom="8dp"/>
-
-                <TextView
-                    android:id="@+id/tv_kelembaban"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Kelembaban: -- %"
-                    android:textSize="18sp"
-                    android:textColor="#334155"
-                    android:layout_marginBottom="8dp"/>
-
-                <TextView
-                    android:id="@+id/tv_gas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Polusi/Gas: --"
-                    android:textSize="18sp"
-                    android:textColor="#334155"
-                    android:layout_marginBottom="8dp"/>
-
-                <TextView
-                    android:id="@+id/tv_cahaya"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cahaya: --"
-                    android:textSize="18sp"
-                    android:textColor="#334155"
-                    android:layout_marginBottom="8dp"/>
-
-                <TextView
-                    android:id="@+id/tv_hujan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Kondisi: --"
-                    android:textSize="18sp"
+                    android:text="Informasi Cuaca"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="#334155"
-                    android:layout_marginBottom="8dp"/>
+                    android:layout_marginBottom="16dp"/>
 
-<!--                <TextView-->
-<!--                    android:id="@+id/tv_status_atap"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Status Atap Mekanik: &#45;&#45;"-->
-<!--                    android:textSize="16sp"-->
-<!--                    android:textColor="#475569"/>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="#FEF2F2"
+                        android:padding="12dp"
+                        android:layout_marginEnd="6dp"
+                        android:backgroundTint="@null"
+                        android:theme="@style/Theme.MaterialComponents"
+                        android:gravity="center_horizontal">
+                        <TextView
+                            android:id="@+id/tv_suhu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Suhu: -- °C"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#EF4444"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="#EFF6FF"
+                        android:padding="12dp"
+                        android:layout_marginStart="6dp"
+                        android:gravity="center_horizontal">
+                        <TextView
+                            android:id="@+id/tv_kelembaban"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kelembaban: -- %"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#3B82F6"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="#F0FDF4"
+                        android:padding="12dp"
+                        android:layout_marginEnd="6dp"
+                        android:gravity="center_horizontal">
+                        <TextView
+                            android:id="@+id/tv_gas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Polusi/Gas: --"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#22C55E"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="#FEFCE8"
+                        android:padding="12dp"
+                        android:layout_marginStart="6dp"
+                        android:gravity="center_horizontal">
+                        <TextView
+                            android:id="@+id/tv_cahaya"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cahaya: --"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#EAB308"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F8FAFC"
+                    android:padding="14dp"
+                    android:gravity="center"
+                    android:layout_marginTop="4dp">
+                    <TextView
+                        android:id="@+id/tv_hujan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cuaca: --"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#1E293B"/>
+                </LinearLayout>
+
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#FFFFFF">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            android:backgroundTint="#FFFFFF"
+            app:strokeWidth="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -103,9 +184,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Panel Kendali Atap"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="#1E293B"
+                    android:textColor="#334155"
                     android:layout_marginBottom="16dp"/>
 
                 <com.google.android.material.materialswitch.MaterialSwitch
@@ -123,20 +204,26 @@
                     <Button
                         android:id="@+id/btn_buka"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="54dp"
                         android:layout_weight="1"
                         android:layout_marginEnd="8dp"
                         android:text="Buka Atap"
-                        android:enabled="true"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        app:cornerRadius="12dp"
                         android:backgroundTint="#10B981"/>
 
                     <Button
                         android:id="@+id/btn_tutup"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="54dp"
                         android:layout_weight="1"
                         android:text="Tutup Atap"
-                        android:enabled="true"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        app:cornerRadius="12dp"
                         android:backgroundTint="#EF4444"/>
                 </LinearLayout>
             </LinearLayout>

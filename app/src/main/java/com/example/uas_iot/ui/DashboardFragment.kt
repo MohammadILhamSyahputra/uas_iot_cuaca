@@ -120,7 +120,7 @@ class DashboardFragment : Fragment() {
                     tvKelembaban.text = "Kelembapan: ${data.kelembapan} %"
                     tvGas.text = "Polusi/Gas: ${data.gas}"
                     tvCahaya.text = "Cahaya: ${data.status_cahaya}"
-                    tvHujan.text = "Kondisi: ${data.status_hujan}"
+                    tvHujan.text = "Cuaca: ${data.status_hujan}"
 //                    tvStatusAtap.text = "Status Atap Mekanik: ${data.status_atap}"
                 }
             }
