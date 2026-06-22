@@ -83,7 +83,7 @@ class DashboardFragment : Fragment() {
 
         // Inisialisasi Retrofit (Ganti IP sesuai IP Laptop/XAMPP kamu)
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.0.14/")
+            .baseUrl("http://10.146.68.249/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         apiService = retrofit.create(ApiService::class.java)
@@ -118,7 +118,7 @@ class DashboardFragment : Fragment() {
                     val data = response.body()!!
                     tvSuhu.text = "Suhu: ${data.suhu} °C"
                     tvKelembaban.text = "Kelembapan: ${data.kelembapan} %"
-                    tvGas.text = "Polusi/Gas: ${data.gas}"
+                    tvGas.text = "Polusi: ${data.gas} PPM"
                     tvCahaya.text = "Cahaya: ${data.status_cahaya}"
                     tvHujan.text = "Cuaca: ${data.status_hujan}"
 //                    tvStatusAtap.text = "Status Atap Mekanik: ${data.status_atap}"

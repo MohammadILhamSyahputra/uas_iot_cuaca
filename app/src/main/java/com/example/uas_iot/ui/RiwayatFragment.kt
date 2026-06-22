@@ -67,7 +67,7 @@ class RiwayatFragment : Fragment() {
         chartKelembaban = view.findViewById(R.id.chart_kelembaban)
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.0.14/") // Ganti IP sesuai IP Laptop/XAMPP kamu
+            .baseUrl("http://10.146.68.249/") // Ganti IP sesuai IP Laptop/XAMPP kamu
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         apiService = retrofit.create(ApiService::class.java)
